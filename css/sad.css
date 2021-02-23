@@ -1,0 +1,133 @@
+/* CSS Document */
+p{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif" !important;
+}
+#on
+{
+	width:100%;
+	height: 60px;
+	margin: 5% auto;
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+#hideUI
+{
+	width:100%;
+	height: 60px;
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+.bg
+{
+	top:0;
+	left:0;
+	width:100%;
+	height:100vh;
+	position: absolute;
+}
+
+#bgf
+{
+	background-color: rgba(0, 0, 0, 0);
+	z-index: -1;
+}
+
+#bgid
+{
+	z-index: -2;
+	background-color: rgb(170, 170, 170);
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes startup{
+	0%   {background-color: rgb(170, 170, 170);}
+	20%  {background-color: rgb(187, 187, 187);}
+	40%  {background-color: rgb(204, 204, 204);}
+	60%  {background-color: rgb(221, 221, 221);}
+	80%  {background-color: rgb(238, 238, 238);}
+	100% {background-color: rgb(255, 255, 255);}
+}
+
+#title
+{
+	position: absolute;
+	left:50%;
+	top:33vh;
+	transform: translateX(-50%);
+}
+
+#title p:first-child
+{
+	font-size: 2.7em;
+	margin:0 auto;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: type 2s steps(20, end);
+}
+
+#title p:nth-child(4)
+{
+	font-size: 1em;
+	font-weight: bold;
+	font-style: italic;
+	margin: 6% auto;
+	text-align: center;
+}
+
+
+@keyframes type 
+{
+  from {width: 0%; }
+  to { width: 100%; }
+}
+
+#levels
+{
+	position: absolute;
+	bottom:0;
+	left:53%;
+	transform: translateX(-53%);
+}
+
+#levels ul
+{
+	list-style: none;
+}
+#levels li
+{
+	float: right;
+}
+#levels li input
+{
+	width:70%;
+}
+@media only screen and (max-width: 600px) {
+	#title{
+		font-size: 0.8em;
+	}
+	#title p:first-child{
+		font-size: 1.5em;
+	}
+	#title input
+	{
+		font-size:1em;
+		height:6vh;
+	}
+	#levels{
+		width:100vw;
+	}
+	#levels li{
+		width:25%;
+	}
+	#levels li input{
+		width:40%;
+		float:left;
+		padding-left:30%;
+	}	
+}

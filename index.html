@@ -1,0 +1,42 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SAD Lamp Online</title>
+<link rel="stylesheet" href="css/sad.css" type="text/css">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
+<script src="js/control.js" type="text/javascript"></script>
+	
+<meta name="description" content="SAD Lamp that can be used online">
+<meta name="keywords" content="SAD, Lamp, Light, SAD Lamp, SAD Light, light therapy, therapy light, therapy lamp">
+<meta name="author" content="Aidan Daly">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	
+<section id="ui">	
+<article id="title">
+	<p>SAD Lamp Online</p>
+	<input onclick="toggleFullScreen();" type="button" id="on" rows="0" value="START"/>
+	<input type="button" id="hideUI" value="Hide UI"/>
+	<p>To unhide the UI double click anywhere<br><br> You can also select from 4 brightness levels below</p>
+</article>
+
+<article id="levels">
+	<ul>
+		<li><input id="b1" type="image" src="images/brightness_empty_1.png" alt="level 1 brightness (lowest)"/></li>
+		<li><input id="b2" type="image" src="images/brightness_empty_2.png" alt="level 2 brightness"/></li>
+		<li><input id="b3" type="image" src="images/brightness_empty_3.png" alt="level 3 brightness"/></li>
+		<li><input id="b4" type="image" src="images/brightness_empty_4.png" alt="level 4 brightness (maximum)"/></li>
+	</ul>
+</article>
+</section>
+	
+<section id="bgf" class="bg"></section>
+<section id="bgid" class="bg"></section>
+	
+</body>
+</html>
