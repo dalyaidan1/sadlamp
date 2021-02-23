@@ -1,1 +1,5 @@
 *.xml
+_notes/
+css/_notes/
+images/_notes/
+js/_notes/
