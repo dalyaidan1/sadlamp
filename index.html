@@ -19,18 +19,27 @@
 	
 <section id="ui">	
 <article id="title">
-	<p>SAD Lamp Online</p>
-	<input onclick="toggleFullScreen();" type="button" id="on" rows="0" value="START"/>
-	<input type="button" id="hideUI" value="Hide UI"/>
-	<p>To unhide the UI double click anywhere<br><br> You can also select from 4 brightness levels below</p>
+	<h1>SAD Lamp Online</h1>
+	<input onclick="toggleFullScreen();" type="button" id="on" rows="0" value="START" title="Start/Stop app"/>
+	<input type="button" id="hideUI" value="Hide UI" title="Hide the UI"/>
+	<p>To unhide the UI double click anywhere</p>
+	<p>You can also select from 4 brightness levels below</p>
 </article>
 
 <article id="levels">
 	<ul>
-		<li><input id="b1" type="image" src="images/brightness_empty_1.png" alt="level 1 brightness (lowest)"/></li>
-		<li><input id="b2" type="image" src="images/brightness_empty_2.png" alt="level 2 brightness"/></li>
-		<li><input id="b3" type="image" src="images/brightness_empty_3.png" alt="level 3 brightness"/></li>
-		<li><input id="b4" type="image" src="images/brightness_empty_4.png" alt="level 4 brightness (maximum)"/></li>
+		<li title="level 1 brightness (lowest)">
+			<input id="b1" type="image" src="images/brightness_empty_1.png" alt="star shape, for level 1 brightness (lowest)"/>
+		</li>
+		<li title="level 2 brightness">
+			<input id="b2" type="image" src="images/brightness_empty_2.png" alt="star shape, for level 2 brightness"/>
+		</li>
+		<li title="level 3 brightness">
+			<input id="b3" type="image" src="images/brightness_empty_3.png" alt="star shape, for level 3 brightness"/>
+		</li>
+		<li title="level 4 brightness (maximum)">
+			<input id="b4" type="image" src="images/brightness_empty_4.png" alt="star shape, for level 4 brightness (maximum)"/>
+		</li>
 	</ul>
 </article>
 </section>

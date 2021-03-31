@@ -1,24 +1,24 @@
 /* CSS Document */
-p{
+
+/**
+	TABLE OF CONTENTS
+	=================
+	1. Global Styles
+	2. Background
+	3. UI
+		3.1. Main Controls
+		3.2. Light Controls
+	4. Animations
+	5. Desktop Adjustments
+*/
+
+/*** 1. Global Styles ***/
+p, h1{
 	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif" !important;
 }
-#on
-{
-	width:100%;
-	height: 60px;
-	margin: 5% auto;
-	font-weight: bold;
-	font-size:1.2em;
-}
 
-#hideUI
-{
-	width:100%;
-	height: 60px;
-	font-weight: bold;
-	font-size:1.2em;
-}
-
+/*** 2. Background ***/
+/* Backgrounds */
 .bg
 {
 	top:0;
@@ -28,12 +28,14 @@ p{
 	position: absolute;
 }
 
+/* front facing backgournd, used to exit full screen*/
 #bgf
 {
 	background-color: rgba(0, 0, 0, 0);
 	z-index: -1;
 }
 
+/* main background that gets its color changed */
 #bgid
 {
 	z-index: -2;
@@ -43,6 +45,95 @@ p{
 }
 
 
+/*** 3. UI ***/
+/** 3.1. Main Controls **/
+
+/* main controls container */
+#title
+{
+	position: absolute;
+	left:50%;
+	top:33vh;
+	transform: translateX(-50%);
+}
+
+/* SAD Lamp Online header */
+#title h1:first-child
+{
+	font-size: 2.7rem;
+	margin:0 auto;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: type 2s steps(20, end);
+}
+
+/* instructions in main controls */
+#title p
+{
+	font-size: 1rem;
+	font-weight: bold;
+	font-style: italic;
+	margin: 2rem 0;
+	text-align: center;
+}
+
+/* button used to start or stop app */
+#on
+{
+	width:100%;
+	height: 60px;
+	margin: 5% auto;
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+/* button used to hide the ui */
+#hideUI
+{
+	width:100%;
+	height: 60px;
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+/** 3.3. Light Controls **/
+
+/* main container of lights*/
+#levels
+{
+	position: absolute;
+	bottom:0;
+	left:50%;
+	transform: translateX(-50%);
+	width: 100%;
+}
+
+/* list containing lights*/
+#levels ul
+{
+	list-style: none;
+	width:100%;
+}
+
+/* container of each light button*/
+#levels li
+{
+	float: right;
+	width:25%;
+}
+
+/* each light control */
+#levels li input
+{
+	width:70%;
+	margin:0 15%;
+}
+
+/*** 4. Animations ****/
+
+/* when the start button is pressed */
 @keyframes startup{
 	0%   {background-color: rgb(170, 170, 170);}
 	20%  {background-color: rgb(187, 187, 187);}
@@ -52,86 +143,20 @@ p{
 	100% {background-color: rgb(255, 255, 255);}
 }
 
-#title
-{
-	position: absolute;
-	left:50%;
-	top:33vh;
-	transform: translateX(-50%);
-}
-
-#title p:first-child
-{
-	font-size: 2.7em;
-	margin:0 auto;
-	font-weight: bold;
-	text-align: center;
-	overflow: hidden;
-	white-space: nowrap;
-	animation: type 2s steps(20, end);
-}
-
-#title p:nth-child(4)
-{
-	font-size: 1em;
-	font-weight: bold;
-	font-style: italic;
-	margin: 6% auto;
-	text-align: center;
-}
-
-
+/* for the app header being typed out */
 @keyframes type 
 {
   from {width: 0%; }
   to { width: 100%; }
 }
 
-#levels
-{
-	position: absolute;
-	bottom:0;
-	left:50%;
-	transform: translateX(-50%);
-}
 
-#levels ul
-{
-	list-style: none;
-	width:100%;
-}
-#levels li
-{
-	float: right;
-	width:25%;
-}
-#levels li input
-{
-	width:70%;
-	margin:0 15%;
-}
+/*** 5. Desktop Adjustments ***/
 
-@media only screen and (max-width: 600px) {
-	#title{
-		font-size: 0.8em;
-	}
-	#title p:first-child{
-		font-size: 1.5em;
-	}
-	#title input
+@media only screen and (min-width: 768px) {
+	/* light controls container */
+	#levels
 	{
-		font-size:1em;
-		height:6vh;
+		width: auto;
 	}
-	#levels{
-		width:100vw;
-	}
-	#levels li{
-		width:25%;
-	}
-	#levels li input{
-		width:40%;
-		float:left;
-		padding-left:30%;
-	}	
 }
